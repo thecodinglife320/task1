@@ -1,12 +1,4 @@
-package org.example
-
-import kotlin.math.cos
-import kotlin.math.exp
-import kotlin.math.ln
-import kotlin.math.pow
-import kotlin.math.sin
-import kotlin.math.sqrt
-import kotlin.math.tan
+import kotlin.math.*
 import kotlin.system.exitProcess
 
 class CalculatorConsole() {
@@ -65,7 +57,7 @@ class CalculatorConsole() {
       }
    }
 
-   val getArithmeticOperation = getArithmeticOperation@{
+    private val getArithmeticOperation = getArithmeticOperation@{
       println("Operation Options:")
       println("[1]. Addition (${Operation.ADDITION.symbol})")
       println("[2]. Subtraction (${Operation.SUBTRACTION.symbol})")
@@ -100,7 +92,7 @@ class CalculatorConsole() {
       }
    }
 
-   val readDoubleInput = readDoubleInput@{ prompt: String ->
+    private val readDoubleInput = readDoubleInput@{ prompt: String ->
       while (true) {
          print(prompt)
          val num = readln()
